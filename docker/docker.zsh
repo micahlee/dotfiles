@@ -16,17 +16,17 @@ function docker_cleanup {
   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 }
 
-function docker_compose() {
+function docker_compose_shortcut() {
   docker-compose $@
 }
 
-alias dc="docker_compose"
+alias dc="docker_compose_shortcut"
 
-function docker() {
+function docker_shortcut() {
   docker $@
 }
 
-alias d="docker"
+alias d="docker_shortcut"
 
 function remove_all_docker_containers() {
   dr $(dl -aq)
