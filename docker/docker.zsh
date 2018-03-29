@@ -15,3 +15,20 @@ alias docker-cleanup="docker_cleanup"
 function docker_cleanup {
   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 }
+
+function docker_compose() {
+  docker-compose $@
+}
+
+alias dc="docker_compose"
+
+function docker() {
+  docker $@
+}
+
+alias d="docker"
+
+function remove_all_docker_containers() {
+  dr $(dl -aq)
+}
+alias dra="remove_all_docker_containers"
