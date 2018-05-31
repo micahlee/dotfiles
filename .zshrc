@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH='$HOME/.oh-my-zsh'
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -95,9 +95,11 @@ source $ZSH/oh-my-zsh.sh
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-source '$HOME/z.sh'
+source "$HOME/z.sh"
 
-[[ -s '$HOME/.rvm/scripts/rvm' ]] && source '$HOME/.rvm/scripts/rvm' # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-source '$HOME/docker/docker.zsh'
-alias config='$(which git) --git-dir="$HOME/.cfg/"" --work-tree="$HOME"'
+source "$HOME/docker/docker.zsh"
+source "$HOME/git/git.zsh"
+
+alias config="$(which git) --git-dir='$HOME/.cfg/' --work-tree='$HOME'"
